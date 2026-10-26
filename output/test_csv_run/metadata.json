@@ -1,0 +1,49 @@
+{
+    "run_name": "test_csv_run",
+    "timestamp": "2026-10-23 16:13:17",
+    "wall_time_seconds": 5.487005233764648,
+    "final_step": 547269,
+    "simulated_days": 27.36345,
+    "endtime": 27.363400000000002,
+    "zero_time": 3.7550000000000003,
+    "parameters": {
+        "physics": {
+            "D_p": 0.45,
+            "D_i": 0.08,
+            "F_p": 1.2,
+            "F_i": 0.8,
+            "flp": 1.2,
+            "fl1": 0.8,
+            "c_max": 1.0
+        },
+        "grid": {
+            "k": 0.01,
+            "r_max": 1.0,
+            "h_factor": 0.45
+        },
+        "simulation": {
+            "max_timesteps": 10000001,
+            "eps": 0.001,
+            "save_interval": 10000,
+            "track_somma_interval": 100
+        }
+    },
+    "computed_constants": {
+        "h": 0.0001,
+        "k": 0.01,
+        "rad": 100,
+        "Fi": 12.732395447351626,
+        "Fp": 19.09859317102744,
+        "half_capacity": 1.5707963267948966
+    },
+    "output_files": {
+        "mineral_profiles_csv": "mineral_profiles.csv",
+        "total_mineral_csv": "total_mineral_vs_time.csv",
+        "final_profiles_csv": "final_profiles.csv",
+        "simulation_summary_csv": "simulation_summary.csv",
+        "simulation_data_npz": "simulation_data.npz",
+        "metadata_json": "metadata.json",
+        "mineral_profiles_plot": "mineral_profiles.png",
+        "total_mineral_plot": "total_mineral_vs_time.png"
+    }
+}

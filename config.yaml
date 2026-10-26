@@ -1,0 +1,32 @@
+# Configuration for 2-Component Radial Symmetric Reaction-Diffusion Simulation
+# Geometry: Cylindrical / Polar radial domain [0, r_b]
+# Boundary Conditions:
+#   - r = 0   : Constant inward flux (Fp, Fi)
+#   - r = r_b : Reflective (zero-flux, Neumann) boundary condition
+
+physics:
+  D_p: 0.45       # Diffusion coefficient of promoter component (c_p)
+  D_i: 0.08       # Diffusion coefficient of inhibitor component (c_i)
+  F_p: 1.2        # Total flux parameter for promoter at r=0 (flp)
+  F_i: 0.8        # Total flux parameter for inhibitor at r=0 (fl1 / fli)
+  flp: 1.2        # Alias for F_p
+  fl1: 0.8        # Alias for F_i
+  c_max: 1.0      # Maximum mineral concentration saturation threshold
+
+grid:
+  k: 0.01         # Spatial grid step dr (in micrometers or scaled units)
+  r_max: 1.0      # Outer boundary radius r_b (domain radius)
+                  # rad = int(r_max / k), e.g., 100 grid points
+  h_factor: 0.45  # Multiplier for numerical stability: dt = h = h_factor * k^2 / D_p
+
+simulation:
+  max_timesteps: 10000001  # Maximum number of time steps to simulate
+  eps: 0.001               # Saturation tolerance threshold for endtime: all(c_m[1:-1] > c_max - eps)
+  save_interval: 10000     # Interval of steps at which to record c_m snapshots (saves memory & disk)
+  track_somma_interval: 100 # Interval for recording total mineral curve
+
+output:
+  output_dir: "output"     # Target folder for outputs and metadata
+  save_plots: true         # Whether to save summary plots (mineral profiles & total mineral)
+  plot_profiles_count: 20  # Number of profile curves to display in the plot
+
