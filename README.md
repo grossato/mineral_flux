@@ -21,7 +21,7 @@ This project implements a modularized and optimized simulation of a radial symme
 ## Project Structure
 
 ```
-reformat_flux/
+mineral_flux/
 ├── config.yaml               # Simulation, grid, and physical parameters
 ├── main.py                   # Main CLI script to run the simulation and save outputs
 ├── utils/                    # Utility package
