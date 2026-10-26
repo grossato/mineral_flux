@@ -33,7 +33,6 @@ reformat_flux/
 │       ├── simulation_data.npz # Compressed arrays (snapshots, somma, final fields)
 │       ├── mineral_profiles.png # Mineral profile evolution plot
 │       └── total_mineral_vs_time.png # Total mineral vs time plot
-├── fast_flux_flux.ipynb      # Original Jupyter notebook
 └── README.md                 # Project documentation
 ```
 
